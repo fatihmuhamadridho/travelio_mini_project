@@ -1,0 +1,21 @@
+###
+GET http://localhost:4000/api/wishlist?page=1&limit=5
+
+###
+POST http://localhost:4000/api/wishlist
+Content-Type: application/json
+
+{
+    "book_id": 3
+}
+
+###
+GET http://localhost:4000/
+
+###
+GET http://localhost:4000/api/reset
+Authorization: Basic superadmin21:superadmin21
+
+###
+GET http://localhost:4000/api/reset/test
+Authorization: Basic superadmin21:superadmin21
