@@ -10,10 +10,8 @@ const HomePage = () => {
 
   return (
     <Default>
-      <Flex h={"100vh"} maw={"80%"} mx={"auto"} justify={"center"} direction={"column"} gap={16}>
-        <Text fz={32} fw={600} ta={"center"}>
-          Google Schoolar
-        </Text>
+      <Flex h={"70vh"} maw={"80%"} mx={"auto"} justify={"center"} direction={"column"} gap={16}>
+        <Text ta={"center"} fz={56} fw={500}>Travelio Search</Text>
         <Formik initialValues={{}} onSubmit={(values: any) => console.log(values)}>
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>

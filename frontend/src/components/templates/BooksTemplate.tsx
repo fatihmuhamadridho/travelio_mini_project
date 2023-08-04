@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import { HeaderResponsive } from "../organisms/Header";
+import { HeaderBooks } from "../organisms/HeaderBooks";
 
-const Default = ({ children }: { children: ReactNode }) => {
+const BooksTemplate = ({ children }: { children: ReactNode }) => {
   return (
     <div className="contanier">
-      <HeaderResponsive
+      <HeaderBooks
         links={[
           { link: "/wishlist", label: "Wishlist" },
         ]}
@@ -14,4 +14,4 @@ const Default = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default Default;
+export default BooksTemplate;

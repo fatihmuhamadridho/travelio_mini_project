@@ -20,15 +20,15 @@ export class WishlistController {
         page: query?.page || 1,
         totalPage: Math.ceil(totalData / Number(query?.limit)) || 1,
         totalDataOnPage,
-        totalData: totalData || 1
+        totalData: totalData || 0
       },
       data: response
     };
   }
 
   static async post(req: Request) {
-    const { book_id } = req.body;
-    const response = await wishlistModel.create({ book_id });
+    const { volumeId, title, subtitle, authors, thumbnail } = req.body;
+    const response = await wishlistModel.create({ volumeId, title, subtitle, authors, thumbnail });
 
     return {
       status: true,

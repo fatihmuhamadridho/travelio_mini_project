@@ -9,7 +9,11 @@ export class BookService {
     volumes: "/volumes",
   };
 
-  static getAllBooks(params: { q: string }) {
+  static getAllBooks(params: { q?: string; [key: string]: any }) {
     return apiClient.get(this.ApiEndpoint.volumes, { params });
+  }
+
+  static getOneBook(query: string) {
+    return apiClient.get(this.ApiEndpoint.volumes + `/${query}`);
   }
 }

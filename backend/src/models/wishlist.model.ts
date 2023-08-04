@@ -1,17 +1,25 @@
 import mongoose from 'mongoose';
 
 type wishlistModelProps = {
-  book_id: number;
+  volumeId: string;
+  title: string,
+  subtitle: string,
+  authors: object,
+  thumbnail: string
 };
 
 const database = mongoose.connection.useDb('travelio_books');
 const wishlistSchema = new mongoose.Schema<wishlistModelProps>(
   {
-    book_id: {
-      type: Number,
+    volumeId: {
+      type: String,
       unique: true,
       index: true
-    }
+    },
+    title: String,
+    subtitle: String,
+    authors: Object,
+    thumbnail: String
   },
   { timestamps: true }
 );
